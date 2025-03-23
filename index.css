@@ -1,0 +1,45 @@
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    h1{
+        text-align: center;
+        font-style: italic ;
+        color: rgb(168, 70, 127);
+        margin-top: 13%;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+        
+    }
+    input[type="number"]{
+        margin-left: 40%;
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #288ca7;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #153a67;
+        transform: scale(1.05);
+    }
+    #final, #scoreboard {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #555;
+    }
+
+    #scoreboard {
+        font-weight: bold;
+    }

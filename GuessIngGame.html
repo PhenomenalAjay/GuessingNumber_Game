@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1><u>Guessing Game</u></h1>
+    <h2>Guess the number between 1 to 10 of computer </h2>
+<input type="number"id="inputnumber">
+<!-- <input type="number"id="inputnumber2"> -->
+<button onclick="btn()">check</button>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    h1{
+        text-align: center;
+        font-style: italic ;
+        color: rgb(168, 70, 127);
+        margin-top: 13%;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+        
+    }
+    input[type="number"]{
+        margin-left: 40%;
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #288ca7;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #153a67;
+        transform: scale(1.05);
+    }
+    #final, #scoreboard {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #555;
+    }
+
+    #scoreboard {
+        font-weight: bold;
+    }
+</style>
+<p id="final">Enter Number and Click 'Check' button to reveal the result <span style="color: #28a745;">Right</span>/<span style="color: red;">Wrong</span></p>
+<p id="scoreboard">you have : 10 chances</p>
+<script>
+    var a =document.getElementById("inputnumber").value;
+    var b = Math.floor(Math.random()*10)+ 1;
+    //var c = document.getElementById("inputnumber2").value;
+    var score = 10;
+
+    function btn(){
+        if(b==a){
+            final.innerHTML="<span style='color':Green;>Right</span>";
+            alert="you won";
+        }else{
+            if(score > 1){
+                score=score-1;
+                scoreboard.textContent="you have : "+score+" chances";
+                final.innerHTML = "<span style='color: red;'>you lost : </span> try again you have "+score +" chances";
+            }else{
+                alert("Game over 'Try again with 10 chances' ");
+                location.reload();
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+

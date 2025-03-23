@@ -43,3 +43,7 @@
     #scoreboard {
         font-weight: bold;
     }
+     @media screen and (max-width: 600px) {
+      #inputnumber{
+        margin-left: 20%;
+      }
